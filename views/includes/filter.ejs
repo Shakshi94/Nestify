@@ -1,0 +1,160 @@
+<% layout('/layouts/boilerplate') -%>
+
+<div class="filters">
+
+    <div class="filter">
+
+        <form action="/listing/category/trending" method="get">
+            <button type="submit" class="btn_category">
+            <div class="icon"><i class="fa-solid fa-fire "></i></div>
+            <p>Trending</p>
+            </button>
+        </form>
+
+    </div>
+
+     <div class="filter">
+        <form action="/listing/category/rooms" method="get">
+            <button type="submit" class="btn_category" >
+            <div class="icon"><i class="fa-solid fa-bed"></i></div>
+            <p>Rooms</p>
+            </button>    
+        </form>
+    </div>
+
+    <div class="filter">
+        <form action="/listing/category/building" method="get">
+            <button type="submit" class="btn_category"> 
+            <div class="icon"><i class="fa-solid fa-city"></i></div>
+            <p>Buildings</p>
+            </button>   
+        </form>
+    </div>
+
+    <div class="filter">
+         <form action="/listing/category/mountain" method="get">
+            <button type="submit" class="btn_category"> 
+            <div class="icon"><i class="fa-solid fa-mountain"></i></div>
+            <p>Mountain</p>
+            </button>
+        </form>
+    </div>
+
+    <div class="filter">
+         <form action="/listing/category/lakh" method="get">
+            <button type="submit" class="btn_category"> 
+            <div class="icon"><i class="fa-solid fa-water"></i></div>
+            <p>lakh</p>
+            </button>
+         </form>   
+    </div>
+
+    <div class="filter">
+        <form action="/listing/category/arctic" method="get">
+            <button type="submit" class="btn_category"> 
+            <div class="icon"><i class="fa-solid fa-snowflake"></i></div>
+            <p>Arctic</p>
+            </button>
+        </form>    
+            
+    </div>
+    
+     <div class="filter">
+          <form action="/listing/category/frams" method="get">
+            <button type="submit" class="btn_category"> 
+             <div class="icon"><i class="fa-solid fa-cow"></i></div>
+             <p>Frams</p>
+            </button>
+        </form>   
+    </div>
+
+    <div class="filter">
+        <form action="/listing/category/amazingPool" method="get">
+            <button type="submit" class="btn_category"> 
+            <div class="icon"><i class="fa-solid fa-person-swimming"></i></div>
+            <p>Amazing Pool</p>
+            </button>
+        </form>
+       
+    </div>
+
+    <div class="filter">
+         <form action="/listing/category/camping" method="get">
+            <button type="submit" class="btn_category"> 
+            <div class="icon"> <i class="fa-solid fa-campground"></i></div>
+             <p>Camping</p>
+            </button>
+         </form>    
+    </div>
+
+    <div class="filter">
+         <form action="/listing/category/tropical" method="get">
+            <button type="submit" class="btn_category"> 
+            <div class="icon"><i class="fa-solid fa-tree"></i></div>
+            <p>Tropical</p>
+            </button>
+         </form>    
+    </div>
+ 
+     <div class="filter">
+         <form action="/listing/category/dome" method="get">
+            <button type="submit" class="btn_category"> 
+            <div class="icon"><i class="fa-solid fa-igloo"></i></div>
+            <p>Domes</p>
+            </button>
+         </form>    
+    </div>
+
+    <div class="filter">
+         <form action="/listing/category/boat" method="get">
+            <button type="submit" class="btn_category"> 
+              <div class="icon"> <i class="fa-solid fa-ship"></i></div>
+              <p>Boats</p>
+            </button>
+         </form>    
+      
+    </div>
+    <div class="filter">
+         <form action="/listing/category/beaches" method="get">
+            <button type="submit" class="btn_category"> 
+             <div class="icon"> <i class="fa-solid fa-umbrella-beach"></i></div>
+             <p>Beaches</p>
+            </button>
+         </form>    
+       
+    </div>
+
+    <div class="tax-switch">
+        <div class="form-switch form-check-reverse">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
+        </div>
+    </div>
+</div>
+</form>
+
+<script>
+        let taxSwitch = document.getElementById('flexSwitchCheckDefault');
+
+        taxSwitch.addEventListener('click',()=>{
+                let taxInfo = document.getElementsByClassName('tax-info');
+                for(info of taxInfo){
+                    if(info.style.display != "inline"){
+                    info.style.display = "inline";
+                    } else{
+                        info.style.display = "none";
+                    }
+                }
+        });
+      // filters 
+
+      let filters = document.querySelectorAll('.filter');
+      
+      for ( filter of filters){
+            filter.addEventListener("click",()=>{
+                     console.log("icon clicked ");
+            })
+    }
+
+ </script>
+

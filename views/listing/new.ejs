@@ -1,0 +1,55 @@
+<% layout('/layouts/boilerplate') -%>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <br>
+            <h3 style="text-align: center;">New Listing</h3>
+            <form action="/listing" method="POST" class="s-form needs-validation" novalidate enctype="multipart/form-data">
+
+                <div class="mb-3">
+                    <label for="f-title" class="form-label">Title</label>
+                    <input type="text" class="form-control" name="listing[title]" placeholder="Enter title" id="f-title" required>
+                    <div class="valid-feedback">Title look good!</div>
+                    <div class="invalid-feedback">please enter title</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="f-des" class="form-label">Description</label>
+                    <textarea class="form-control" id="f-des" rows="3" placeholder="Enter the Description" name="listing[description]" required></textarea>
+                    <div class="invalid-feedback">please write a short description about the place</div>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="f-img" class="form-label">Upload New Image</label>
+                    <input class="form-control" id="f-image" type="file" name="listing[image]" required>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="f-price" class="form-label">Price</label>
+                        <input id="f-price" type="string" name="listing[price]" placeholder="Enter the price" class="form-control" required>
+                        <div class="invalid-feedback">price should be valid!</div>
+                    </div>
+
+                    <div class="mb-3 col-md-8">
+                        <label for="f-location" class="form-label">Location</label>
+                        <input id="f-location" type="text" name="listing[location]" placeholder="Vadodara,Gujarat" class="form-control" required>
+                        <div class="invalid-feedback">location name should be valid!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="f-country" class="form-label">Country</label>
+                    <input id="f-country" type="text" name="listing[country]" placeholder="India" class="form-control" required>
+                    <div class="invalid-feedback">country name should be valid!</div>
+                </div>
+
+                 <div class="mb-3">
+                    <label for="f-category" class="form-label">Category</label>
+                    <input id="f-category" type="text" name="listing[category]" placeholder="mountains or beaches" class="form-control" required>
+                    <div class="invalid-feedback">category name should be valid!</div>
+                </div>
+                <button class="btn n-btn mt-3">Add</button>
+            </form>
+        </div>
+    </div>

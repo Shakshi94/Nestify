@@ -1,0 +1,111 @@
+<style>
+
+    .search-div{
+        display: none;
+    }
+    .search-btn {
+        border: #ff385c;
+        background-color: #ff385c;
+        color: white;
+    }
+    
+    .search-btn:hover {
+        background-color: #ff385c !important;
+        color: white !important;
+    }
+
+    .nav-link-explore{
+        display: none;
+    }
+    
+    @media (max-width: 768px) {
+        
+        .navbar{
+            height: 8rem;
+        }
+        .navbar-nav-a {
+            position: fixed;
+            top: 100px;
+            background-color: white;
+            box-shadow: 0px 0px 2px 2px black;
+            height: calc(100vh-100px);
+            width: 40%;
+            flex-direction: column;
+            align-items: center;
+            right: 0;
+            margin-right: 1rem;
+        }
+
+        .navbar-nav-explore ,.navbar-nav-search{
+            display: none;
+        }
+
+        .search-div{
+                display: block;
+                margin-top: 1rem;
+        }
+        
+        .navbar-toggler{
+                margin-bottom: 3.5rem;
+                position: fixed;
+                right: 0;
+            }
+
+        .nav-link-explore{
+            display: block;
+        }
+
+    }
+
+</style>
+
+
+<nav class="navbar navbar-expand-md bg-body-light sticky-top">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="/listing"><i class="fa-regular fa-compass"></i></a>
+
+        <div class="container-fluid search-div ">
+            <form class="d-flex" role="search" action="/listing/search" method="GET">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" q="search">
+            <button class="btn search-btn" type="submit">Search</button>
+            </form>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+            
+            
+        <div class="navbar-nav navbar-nav-explore ">
+            <a class="nav-link" href="/listing"><b>Explore</b></a>
+        </div>
+
+             
+        <div class="navbar-nav ms-auto navbar-nav-search">
+
+            <form action="/listing/search" method="GET" role="search" class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="search country" aria-label="Search" name="q">
+                <button class=" btn search-btn">Search</button>
+            </form>
+        </div>
+
+        <div class="navbar-nav ms-auto navbar-nav-a">
+                <a class="nav-link nav-link-explore" href="/listing"><b>Explore</b></a>
+                <a class="nav-link creating-listing-nav-link" href="/listing/new?">Nestify by home</a>
+                <% if(!currUser){ %>
+                    <a class="nav-link" href="/signup"><b>Sign up</b></a>
+                    <a class="nav-link" href="/login"><b>Log in</b></a>
+                    <% } %>
+
+                        <% if(currUser){ %>
+                            <a class="nav-link" href="/logout"><b>Log Out</b></a>
+                            <% } %>
+            </div>
+        </div>
+
+    </div>
+</nav>

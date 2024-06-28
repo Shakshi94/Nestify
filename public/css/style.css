@@ -1,0 +1,238 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    flex: 1;
+}
+
+.navbar {
+    height: 5rem;
+    border-bottom: 1px solid grey;
+    background-color: white;
+}
+
+.fa-regular {
+    color: #ff385c;
+    font-size: 2rem;
+}
+
+.nav-link {
+    font-size: small;
+    color: black !important;
+} */
+
+ .creating-listing-nav-link:hover {
+    background-color: rgb(206, 206, 206, 0.3);
+    border-radius: 2rem;
+}  
+
+
+
+.fmain {
+    border-top: 2px solid black;
+}
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+.f-social {
+    padding: 1rem;
+}
+
+.f-social,
+.f-links,
+.wanderlust-brand {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-social i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-social i:hover {
+    opacity: 0.7;
+}
+
+.f-links a {
+    padding: 1rem;
+    text-decoration: none;
+    color: #222;
+}
+
+.f-links a:hover {
+    text-decoration: underline;
+}
+
+.listingcard {
+    border: none !important;
+    margin-bottom: 2rem !important;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text {
+    font-weight: 400px !important;
+}
+
+.card-a {
+    text-decoration: none;
+}
+
+
+/* overlay */
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+
+/* // add new listing  */
+
+
+/* .s-form {
+    padding: 2rem;
+    border: 1px solid #222;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+} */
+
+.n-btn {
+    background-color: #ff385c !important;
+    margin-bottom: 1rem;
+}
+
+.e-btn {
+    border: none !important;
+    background-color: #ff385c !important;
+    margin-bottom: 1rem;
+}
+
+
+/* Show page */
+
+.show-img {
+    height: 30vh !important;
+}
+
+.show-div {
+    display: flex;
+}
+
+.show-btn {
+    background-color: #ff385c !important;
+    border: none !important;
+}
+
+
+/* map */
+
+#map {
+    height: 400px;
+    width: 100vh;
+}
+
+
+/* filters  */
+
+.filters {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none
+}
+
+.filter {
+    margin-right: 1rem;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.filters::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+}
+
+@media (max-width: 1024px) {
+    .filter {
+        width: 100px;
+        /* Adjust width for medium screens */
+    }
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.filter p {
+    font-size: 0.7rem;
+}
+
+.icon {
+    text-align: center;
+}
+
+.tax-info {
+    display: none;
+}
+
+.tax-switch {
+    display: flex;
+    align-items: center;
+    border: 2px solid #dadada;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.tax-switch:hover {
+    border: 2px solid black;
+    background-color: #dadada;
+}
+
+.form-switch label {
+    font-size: small;
+}
+/* filter buttons */
+
+.btn_category {
+    border: none;
+    background-color: white;
+}

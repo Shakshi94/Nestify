@@ -236,3 +236,53 @@ body {
     border: none;
     background-color: white;
 }
+
+/* chatbot styling */
+
+.chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border:2px solid #ff385c;
+            border-radius: 50%;
+            padding: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-icon  i{
+      position: fixed;
+      bottom: 33px;
+      right: 30px;
+      font-size: 20px;
+      cursor: pointer;
+}
+
+ .chatbox {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            max-width: 100%;
+            display: none;
+            z-index: 1000;
+        }
+        .chatbox-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .chatbox-body {
+            background-color: white;
+            border: 1px solid #007bff;
+            height: 300px;
+            padding: 10px;
+            overflow-y: auto;
+        }
+        .chatbox-input {
+            padding: 10px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+        }

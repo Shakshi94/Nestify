@@ -5,6 +5,11 @@ const passport = require('passport');
 const { saveRedirectUrl } = require('../middleware.js');
 const userController = require('../controllers/user.js');
 
+
+router.route('/chat')
+      .get(userController.renderChatbot)
+      .post(userController.Chatbot);
+
 router.route('/signup')
       .get(userController.renderSignupForm)
       .post(wrapAsync(userController.signUp));

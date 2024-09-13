@@ -1,3 +1,4 @@
+const { render } = require('ejs');
 const user = require('../models/user.js');
 
 module.exports.renderSignupForm = (req,res)=>{
@@ -45,3 +46,11 @@ module.exports.logout = (req,res,next)=>{
                 res.redirect("/listing");
         });
 };
+
+module.exports.renderChatbot = (req,res)=>{
+        res.render("users/chatbot.ejs");
+}
+
+module.exports.Chatbot = (req,res)=>{
+        // res.render("chatbot.ejs");
+}

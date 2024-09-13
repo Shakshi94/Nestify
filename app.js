@@ -2,6 +2,7 @@ if (process.env.NODE_ENV != "production") {
     require('dotenv').config()
 }
 const express = require('express');
+const OpenAI =  require('openai');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const app = express();
@@ -22,8 +23,8 @@ const userRouter = require("./routes/users.js");
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const user = require('./models/user.js');
-const { error } = require('console');
 const Db_url = process.env.ATLAS_DB;
+
 
 main()
     .then(() => {
@@ -32,7 +33,7 @@ main()
     .catch((err) => console.log(err));
 
 async function main() {
-    await mongoose.connect(Db_url);
+     mongoose.connect(Db_url);
 };
 
 const store = MongoStore.create({
@@ -55,9 +56,17 @@ const sessionoption = {
     }
 };
 
+
+
 store.on("error", () => {
     console.log("Error in MongoDb session!!", err);
+});
+
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+    organization: process.env.OPENAI_ORGANIZATION,
 })
+
 
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');

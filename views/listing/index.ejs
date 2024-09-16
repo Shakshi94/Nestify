@@ -23,7 +23,6 @@
     <i class="fa-brands fa-rocketchat" style="color: #fe0b30;"></i>
 </div>
 
-<!-- Chatbot Window (Initially Hidden) -->
 <div class="chatbot-window" id="chatbotWindow">
     <div class="chatbot-header">
         <div>Ask me </div>
@@ -43,9 +42,9 @@
         </div>
 
 
-        <form class="row g-3 chatbot-form">
+        <form class="row g-3 chatbot-form" method="post" action= '/chat'>
             <div  class="col-auto h-25">
-            <input type="text" placeholder="Type Message" class=" form-control input-sm h-25 ">
+            <input type="text" placeholder="Type Message" class=" form-control input-sm h-25"  name="message" >
             </div>
             <div class="col-auto">
             <button type="submit" class="btn chatbot-btn btn-sm">Send</button>

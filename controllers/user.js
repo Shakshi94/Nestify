@@ -1,5 +1,10 @@
-const { render } = require('ejs');
 const user = require('../models/user.js');
+const OpenAI =  require('openai');
+
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+    organization: process.env.OPENAI_ORGANIZATION,
+})
 
 module.exports.renderSignupForm = (req,res)=>{
         res.render("users/signup.ejs");
@@ -47,6 +52,14 @@ module.exports.logout = (req,res,next)=>{
         });
 };
 
-module.exports.Chatbot = (req,res)=>{
-        // res.render("chatbot.ejs");
+module.exports.Chatbot = async (req,res)=>{
+        const message = req.body.message;
+     
+        const chatCompletion = await openai.chat.completions.create({
+        messages: [{ role: 'user', content: message }],
+        model: 'gpt-3.5-turbo',
+        });
+
+        res.send(chatCompletion.choices[0].message);
+        console.log(chatCompletion.choices[0].message);
 }

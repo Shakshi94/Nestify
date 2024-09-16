@@ -116,15 +116,7 @@ body {
 }
 
 
-/* // add new listing  */
 
-
-/* .s-form {
-    padding: 2rem;
-    border: 1px solid #222;
-    border-radius: 1rem;
-    margin-bottom: 2rem;
-} */
 
 .n-btn {
     background-color: #ff385c !important;
@@ -260,7 +252,7 @@ body {
 
  .chatbot-window{
     position: fixed;
-    bottom: 80px;
+    bottom: 50px;
     right: 20px;
     width: 300px;
     height: 400px;
@@ -268,8 +260,10 @@ body {
     border:1px solid #ccc;
     display:none;
     flex-direction: column;
-    box-shadow: 0 2px 10px rgb(0, 0, 0, 0.3);
-
+    border-top-left-radius: 1rem 1rem ;
+    border-top-right-radius: 1rem 1rem ;
+    border-bottom-left-radius: 1rem 1rem ;
+    border-bottom-right-radius: 1rem 1rem ;
 }
 
 .chatbot-header {
@@ -280,17 +274,73 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top-left-radius: 1rem 1rem ;
+    border-top-right-radius: 1rem 1rem ;
+    display: flex;
+    align-items: center;
 }
 .chatbot-body {
     background-color: white;
-    border: 1px solid #ff385c;
     height: 300px;
     padding: 15px;
     flex-grow: 1;
     overflow-y: auto;
+    border-bottom-left-radius: 1rem 1rem ;
+    border-bottom-right-radius: 1rem 1rem ;
+
 }
 
+.chatbot-form{
+    position: fixed;
+    bottom: 60px;
+    border-top:1px solid  #ff385c;
+    display: flex !important;
+    justify-content: center !important;
+}
 .close-btn{
     cursor: pointer;
     font-size:24px;
+}
+
+.chatbot-btn{
+    background-color: #ff385c !important;
+    color: white !important;
+}
+/* Common styles for both messages */
+.chats {
+    height: 230px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+
+.AI-message, .user-message {
+    border-radius: 1rem;
+    background-color: #ff385c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 0.75rem;
+    display: inline-block; /* Ensure each line starts at the same position */
+    clear: both;
+}
+
+
+
+.AI-message{
+    text-align: left;
+    margin-left: 0; 
+    float: left; 
+}
+
+
+.user-message {
+    background-color: #ff385c;
+    color: white;
+    text-align: right;
+    margin-left: auto; 
+    float: right; 
 }

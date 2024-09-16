@@ -26,12 +26,33 @@
 <!-- Chatbot Window (Initially Hidden) -->
 <div class="chatbot-window" id="chatbotWindow">
     <div class="chatbot-header">
-        <h3>Chat with us</h3>
-        <span class="close-btn" id="closeChatbot">&times;</span>
+        <div>Ask me </div>
+        <div class="close-btn sm" id="closeChatbot">&times;</div>
     </div>
+
     <div class="chatbot-body">
-        <p>Welcome to the chatbot! How can I assist you?</p>
+        
+        
+        <div class="chats">
+            <div class="AI-message">Welcome to the chatbot! How can I assist you?</div>
+            <div class="user-message">what is travels?</div>
+             <div class="AI-message ">Travel is the movement of people between distant geographical locations. 
+                Travel can be done by foot, bicycle, automobile, train, boat, bus, airplane, 
+                ship or other means, with or without luggage, and can be one way or round trip
+             </div>
+        </div>
+
+
+        <form class="row g-3 chatbot-form">
+            <div  class="col-auto h-25">
+            <input type="text" placeholder="Type Message" class=" form-control input-sm h-25 ">
+            </div>
+            <div class="col-auto">
+            <button type="submit" class="btn chatbot-btn btn-sm">Send</button>
+            </div>
+        </form>
     </div>
+   
 </div>
 
 <script src="/js/chatbot.js"></script>    

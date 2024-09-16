@@ -47,10 +47,6 @@ module.exports.logout = (req,res,next)=>{
         });
 };
 
-module.exports.renderChatbot = (req,res)=>{
-        res.render("users/chatbot.ejs");
-}
-
 module.exports.Chatbot = (req,res)=>{
         // res.render("chatbot.ejs");
 }

@@ -19,10 +19,19 @@
          <% } %>
     </div>
 
-<a href="/chat">
-     <div class="chatbot-icon">
-            <i class="fa-brands fa-rocketchat" style="color: #fe0b30;"></i>
-    </div>
-</a>
+<div class="chatbot-icon" id="chatbot-icon">
+    <i class="fa-brands fa-rocketchat" style="color: #fe0b30;"></i>
+</div>
 
-<%-include("../users/chatbot.ejs")%>
+<!-- Chatbot Window (Initially Hidden) -->
+<div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+        <h3>Chat with us</h3>
+        <span class="close-btn" id="closeChatbot">&times;</span>
+    </div>
+    <div class="chatbot-body">
+        <p>Welcome to the chatbot! How can I assist you?</p>
+    </div>
+</div>
+
+<script src="/js/chatbot.js"></script>    

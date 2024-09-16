@@ -7,7 +7,6 @@ const userController = require('../controllers/user.js');
 
 
 router.route('/chat')
-      .get(userController.renderChatbot)
       .post(userController.Chatbot);
 
 router.route('/signup')

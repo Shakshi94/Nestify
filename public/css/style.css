@@ -258,31 +258,39 @@ body {
       cursor: pointer;
 }
 
- .chatbox {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 300px;
-            max-width: 100%;
-            display: none;
-            z-index: 1000;
-        }
-        .chatbox-header {
-            background-color: #007bff;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            cursor: pointer;
-        }
-        .chatbox-body {
-            background-color: white;
-            border: 1px solid #007bff;
-            height: 300px;
-            padding: 10px;
-            overflow-y: auto;
-        }
-        .chatbox-input {
-            padding: 10px;
-            background-color: #f7f7f7;
-            border: 1px solid #ddd;
-        }
+ .chatbot-window{
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #f1f1f1;
+    border:1px solid #ccc;
+    display:none;
+    flex-direction: column;
+    box-shadow: 0 2px 10px rgb(0, 0, 0, 0.3);
+
+}
+
+.chatbot-header {
+    background-color: #ff385c;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chatbot-body {
+    background-color: white;
+    border: 1px solid #ff385c;
+    height: 300px;
+    padding: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.close-btn{
+    cursor: pointer;
+    font-size:24px;
+}

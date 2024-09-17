@@ -2,14 +2,13 @@ if (process.env.NODE_ENV != "production") {
     require('dotenv').config()
 }
 const express = require('express');
+const OpenAI =  require('openai');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const app = express();
 const port = 3000;
 
 const path = require('path');
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 const methodOverride = require('method-override');
 const expressError = require("./utlis/expressError.js");
 

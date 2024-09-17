@@ -3,8 +3,9 @@ const OpenAI =  require('openai');
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
-    organization: process.env.OPENAI_ORGANIZATION,
+//     organization: process.env.OPENAI_ORGANIZATION,
 })
+
 
 module.exports.renderSignupForm = (req,res)=>{
         res.render("users/signup.ejs");

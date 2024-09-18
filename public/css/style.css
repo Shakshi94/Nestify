@@ -1,9 +1,10 @@
-body {
+html,body {
     font-family: "Plus Jakarta Sans", sans-serif !important;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     overflow-x: hidden;
+    height: 100%;
+    margin: 0;
 }
 
 .container {
@@ -31,6 +32,13 @@ body {
     border-radius: 2rem;
 }  
 
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
 
 
 .fmain {
@@ -102,7 +110,10 @@ body {
 .card-a {
     text-decoration: none;
 }
-
+/* Error page  */
+.container-fluid{
+    overflow-wrap: break-word !important; 
+}
 
 /* overlay */
 
@@ -240,6 +251,7 @@ body {
             padding: 20px;
             cursor: pointer;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 999; 
 }
 
 .chatbot-icon  i{
@@ -248,6 +260,7 @@ body {
       right: 30px;
       font-size: 20px;
       cursor: pointer;
+      z-index: 999; 
 }
 
  .chatbot-window{
@@ -260,6 +273,7 @@ body {
     border:1px solid #ccc;
     display:none;
     flex-direction: column;
+    z-index: 999; 
     border-top-left-radius: 1rem 1rem ;
     border-top-right-radius: 1rem 1rem ;
     border-bottom-left-radius: 1rem 1rem ;

@@ -3,7 +3,7 @@ const OpenAI =  require('openai');
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
-//     organization: process.env.OPENAI_ORGANIZATION,
+    organization: process.env.OPENAI_ORGANIZATION,
 })
 
 
@@ -55,7 +55,8 @@ module.exports.logout = (req,res,next)=>{
 
 module.exports.Chatbot = async (req,res)=>{
         const message = req.body.message;
-     
+        console.log(process.env.OPENAI_API_KEY);
+        console.log(process.env.OPENAI_ORGANIZATION);
         const chatCompletion = await openai.chat.completions.create({
         messages: [{ role: 'user', content: message }],
         model: 'gpt-3.5-turbo',
